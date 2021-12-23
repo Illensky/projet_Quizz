@@ -1,0 +1,50 @@
+html {
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: sans-serif;
+    background-color: black;
+    color: white;
+}
+
+#container {
+    width: 70%;
+    margin: auto;
+    background-color: darkgray;
+    border-radius: 20px;
+}
+
+p, div {
+    padding: 10px;
+    font-size: 2rem;
+}
+
+button {
+    background-color: white;
+    color: darkgray;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.answerP {
+    background-color: white;
+    color: darkgray;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 50%;
+    margin: 20px auto;
+}
+
+.answerP:hover {
+    transform: scale(1.2);
+}
+
+#scoreDiv {
+    font-size: 4rem;
+}

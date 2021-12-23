@@ -15,6 +15,7 @@ let score = 0;
 let questionI = 0;
 
 let wrongAnswer = [];
+
 function runQuestionary (el, questionary, startBtn) {
     if (document.querySelector("#questionaryDiv")){
         document.querySelector("#questionaryDiv").remove();
@@ -71,7 +72,7 @@ function runQuestionary (el, questionary, startBtn) {
         errorDiv.id = "errorDiv"
         for (let error of wrongAnswer) {
             const errorP = document.createElement('p');
-            errorP.innerHTML = "Erreur a la question : <br>" + questionary[error[0]][0] + "<br> Vous avez répondu : " + error[1] +
+            errorP.innerHTML = "Erreur a la question " + (error[0] +1).toString() + " : <br>" + questionary[error[0]][0] + "<br> Vous avez répondu : " + error[1] +
             "<br> La bonne réponse était : " + questionary[error[0]][2];
             errorDiv.appendChild(errorP);
         }
@@ -86,5 +87,5 @@ function runQuestionary (el, questionary, startBtn) {
 }
 
 document.querySelector('#start').addEventListener("click", function () {
-    runQuestionary(document.querySelector("body"), questionary, this)
+    runQuestionary(document.querySelector("#container"), questionary, this)
 })
